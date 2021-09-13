@@ -1,0 +1,16 @@
+{
+  "name": "Link Cleaner",
+  "description": "",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+    ],
+  "action": {
+    "default_title": "Link Cleaner",
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  }
+}
