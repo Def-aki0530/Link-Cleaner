@@ -3,16 +3,10 @@ let shortUrl;
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, tabs => {
 	var longUrl = tabs[0].url;
 	if( longUrl.indexOf('https://www.amazon.co.jp/') != -1) {
-		var middleUrl = shortenUrls(longUrl);
-		shortUrl = middleUrl.replace('https://','');
-	} else if( longUrl.indexOf('https://www.') != -1) {
-		shortUrl = longUrl.replace('https://www.','');
-	} else if( longUrl.indexOf('https://') != -1) {
-		shortUrl = longUrl.replace('https://','');
+		shortUrl = shortenUrls(longUrl);
 	} else {
 		shortUrl = longUrl;
 	}
-
 });
 
 document.getElementById("button").onclick = function() {
